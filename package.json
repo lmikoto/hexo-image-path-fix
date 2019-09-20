@@ -1,5 +1,5 @@
 {
-  "name": "hexo-asset-image",
+  "name": "hexo-image-path-fix",
   "version": "0.0.5",
   "description": "Give asset image in hexo a absolutely path automatically",
   "main": "index.js",
