@@ -8,7 +8,7 @@ function getPosition(str, m, i) {
 
 hexo.extend.filter.register('after_post_render', function(data){
   var config = hexo.config;
-  if(config.post_asset_folder){
+  if(config.path_fix){
     var link = data.permalink;
     var beginPos = getPosition(link, '/', 3) + 1;
     var appendLink = '';
@@ -55,8 +55,8 @@ hexo.extend.filter.register('after_post_render', function(data){
             srcArray.shift();
             src = srcArray.join('/');
 
-            $(this).attr('src', config.root + link + src);
-            console.info&&console.info("update link as:-->"+config.root + link + src);
+            $(this).attr('src', config.root + src);
+            console.info&&console.info("update link as:-->"+config.root + src);
           }
         }else{
           console.info&&console.info("no src attr, skipped...");
